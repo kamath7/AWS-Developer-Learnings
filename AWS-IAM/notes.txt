@@ -1,0 +1,18 @@
+IAM Notes
+IAM - Manage users and their level of access to the aws console 
+
+IAM Gives 
+
+Centralised - Control of AWS acct 
+Access - Shared access to AWS acct 
+Permissions - Granular Permissions
+Identity Federation - Support Identity providers such as Active Directory,
+MFA - Multi Factor Authentication 
+
+Also allows temp access, password policies, Integration with AWS services and also PCI DSS compliance
+
+Users - End Users 
+Groups - Collection of users under one set of Permissions
+Roles - define sets of permissions. ex. Lambda exec role 
+
+Policy - document that defines one or more permissions. IAM policy can be attached to users, groups or roles 
