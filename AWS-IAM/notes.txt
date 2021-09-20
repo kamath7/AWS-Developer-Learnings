@@ -16,3 +16,14 @@ Groups - Collection of users under one set of Permissions
 Roles - define sets of permissions. ex. Lambda exec role 
 
 Policy - document that defines one or more permissions. IAM policy can be attached to users, groups or roles 
+
+IAM Policy Simulator
+
+- Test effects of IAM policies before committing 
+- Validate policies works as expected
+- Test policies already attached to existing users 
+
+IAM is universal, not regional.
+Root acct created during first setup. acct has complete admin access 
+Link - https://policysim.aws.amazon.com 
+
