@@ -11,3 +11,27 @@ EC2 - Pay only for what you use. (Pay as you go model)
 No wasted capacity in EC2. Grow and shrink when you need 
 
 Cloud - Servers up and running within minutes instead of months (On-premise)
+
+
+EC2 pricing options 
+
+a) On Demand - Pay by the hour or the second depending on type of instance you run 
+b) Reserved - Reserved capacity for one or three years. Upto 72%  discount on hourly charge
+c) Spot - Purchase unused capacity at discount of up to 90% . Prices fluctuate with suppy and demand 
+d) Dedicated - Physical EC2 server dedicated for your use. Most expensive option 
+
+On Demand 
+- Flexible. Low cost and flexibility of EC2 without any up-front payment 
+- Short-Tem . Application with short term / unpredictable workloads that cannot be interrupted
+- Testing the water - applications being developed on EC2 for the first time 
+
+Reserved 
+
+- Predictable usage applications (steady state)
+- Application that require reserved capacity
+- Pay up front. Can make up-front payments. Discounts advantage
+- Standard RIs - upto 72% off on-demand price 
+- Convertible RIs - Upto 54% discount. Option to change to different RI type of equal or greater value (t3 large to t3 xl)
+- Scheduled RIs - Launch within time window you define. match capcaity reservation to predictable recurring schedule that only requires a fraction of day, week or month 
+
+RI- Reserved Instance
