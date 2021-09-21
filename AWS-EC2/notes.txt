@@ -1,0 +1,13 @@
+EC2 Notes
+
+Elastic Compute Cloud - EC2
+
+- Secure resizable Compute capacity in the cloud. Like a VM only hosted in AWS instead of own DC. 
+- Designed to make web scale cloud computing easier
+- Capacity you want when you need it 
+- Complete control of instances. Instances -> VMs 
+
+EC2 - Pay only for what you use. (Pay as you go model)
+No wasted capacity in EC2. Grow and shrink when you need 
+
+Cloud - Servers up and running within minutes instead of months (On-premise)
