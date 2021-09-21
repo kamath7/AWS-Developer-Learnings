@@ -66,3 +66,5 @@ Instance types mean the following
 Micro instance - low traffic websites 
 FPGA - Field Programmable Gate Array - Applications which need massive parallel programming power. Financial fields, Genomics - applications 
 
+On Mac important note- download the .pem file. run -> chmod 400 *pem file name* -> Once done - ssh ec2-user@*public ipv4 address*
+For windows convert .pem to ppk
