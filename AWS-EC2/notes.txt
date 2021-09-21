@@ -68,3 +68,64 @@ FPGA - Field Programmable Gate Array - Applications which need massive parallel 
 
 On Mac important note- download the .pem file. run -> chmod 400 *pem file name* -> Once done - ssh ec2-user@*public ipv4 address*
 For windows convert .pem to ppk
+
+EBS Volumes
+Elastic Block Store - EBS 
+-Storage volumes that you can attach to EC2 instances - use them as you wish 
+- Can use EBS to run a db 
+- Run an OS 
+- store data / applications
+
+EBS designed for 
+- Mission critical workloads. Highly available (auto replicated within a single AZ to protect against HW failures)
+- EBS volumes are also highly scalable (can change capacity and volume type without any downtime)
+
+Different types of EBS volumes 
+
+- General Purpose SSD (gp2)
+- Balance of price and performance
+- 3IOPS per gib upto max of 16000 IOPS per volumes
+- good for boot volumes or develipment which are not latency sensitive 
+
+Provisioned IOPS SSD (io1)
+- High performance option and most expensive 
+- upto 64000 IOPS per vol. 50 iops per gib 
+- If 16000 IOPS is needed 
+- designed for IO intensive apps such as DBs 
+
+Provisioned IOPS SSD (io2)
+- Latest gen 
+- Higher durability and more iops 
+-io2 has the same price as io1 
+- IO2 has 500 IOPS per GIB. Upto 64000 IOPS. 99.999% durability instead of 99.9%
+- Suitable for IO intensive and latency sensitive workloads. Large DBs. Also  apps that require higher durability
+
+Throughput optimised HDD (st1)
+- Low cost HDD vol 
+- Baseline Throughput of 40MB/s per TB
+- Ability to burst upto 250MB/s per TB 
+- Max Throughput of 500 MB/sper vol 
+- Frequently accessed, Throughput intensive workloads (big Data, Data Warehouses, Log Processing)
+
+Cold HDD (sc1) 
+- Lowest cost option 
+- Baseline Throughput - 12 MB/s per TB 
+- Ability to burst - upto 80 MB/s per TB 
+- max Throughput - 250Mb/s per vol 
+- good choice for colder data requiring fewer scans per day 
+- good for apps that need lowest cost and performance is not a factor 
+- cannot be a boot vol 
+
+IOPs vs Throughput 
+
+IOPS 
+- Measues number of read and write operations per sec 
+- Important metric for quick transactions, low latency apps, transactional workloads. (ex. DB ops )
+- Ability to action readsand writes very quickly
+- Choose provisioned IOPS SSD (io1 or io2)
+
+Throughput 
+- Measures number of bits read or written per second (MB/s)
+- Important metric for large dataset, large IO sizes, complex queries. (Algorithmic Financial Trading)
+- Ability to deal with large datasets
+- choose Throughput optimised HDD (st1)
