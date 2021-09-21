@@ -55,3 +55,14 @@ Savings plans -
 - Super flexible - not only ec2. includes serverless -> lambda 
 
 Pricing Calculator - https://calculator.aws/#/
+
+Different types of EC2 instances 
+
+Instance types mean the following 
+- Hardware - hardware of the host computer used 
+- Capabilities - Each instance type offers different compute, memory and storage capabilities and are grouped in instance families 
+- Application Requirements - Select instnace type based on requirements of application that you plan to run on instance 
+
+Micro instance - low traffic websites 
+FPGA - Field Programmable Gate Array - Applications which need massive parallel programming power. Financial fields, Genomics - applications 
+
