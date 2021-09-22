@@ -129,3 +129,47 @@ Throughput
 - Important metric for large dataset, large IO sizes, complex queries. (Algorithmic Financial Trading)
 - Ability to deal with large datasets
 - choose Throughput optimised HDD (st1)
+
+Load Balancer 
+
+- Distributes network traffic across group of servers 
+- load balancer will notice if one server is down 
+- Capacity can increase whenever needed. 
+
+Elastic Load Balancer 
+
+3 options 
+- Application LOad Balancer - Can balance http and https traffic 
+- Network Load Balancer - balance TCP. Also high performance
+- Classic Load Balancer - can balance both http/https and TCP. this is the legacy option 
+
+Application Load Balancer 
+- Balances http and https traffic
+- Operate at layer 7 of OSI model (Application Layer)
+
+OSI 
+Application - What end user sees 
+Presentation - Data in usable format. SSH
+Session - maintains connections and sessions 
+Transport - Transmits data using TCP and UDP 
+Network - Logically routes packet based on IP Address 
+Data lInk - Physically transmits data based on MAC addr 
+Physical - Transmits bits and bytes over Physical devices 
+App Load Balancer
+HTTP/Https. intelligent load balancing. routes requests to specific web server based on type of request 
+
+
+NW Load Balancer 
+
+High performance. Operates at Transport Layer. Capable of handling millions of requests per second while maintaining high level quality
+
+Classic Load Balancer 
+a) Legacy 
+b) Layer 7 specific features support (X-Forwarded-For Header). sticky sessions 
+c) Layer 4 load balancing for tcp 
+
+X-Forwarded-For Header
+a) Identifying originating IP address of client connecting through load balancer
+
+Common LB errors 
+- Error 504 (Gateway timeout) - Target failed to respond (downstream service fails to respond). Check app in this case. App may have issue. App is not contactable (DB)
