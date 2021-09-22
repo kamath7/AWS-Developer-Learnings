@@ -205,3 +205,9 @@ aws s3api list-objects --bucket my-bucket --page-size 100
 
 ..max items to retrieve fewer items 
 aws s3api list-objects --bucket my-bucket --max-items 100 
+
+Roles are the preferred from security perspective 
+Hard coding security credentials to be avoided 
+policies control a role's permissions
+Can update a plicy attached to a role and immediate effect 
+Attaching and detaching roles to an ec2 instance and it will be immediately done
