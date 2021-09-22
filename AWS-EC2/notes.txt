@@ -177,3 +177,31 @@ Common LB errors
 Route 53 - 
 - DNS service 
 - Allows to map domain name to  EC2 instances, load balancers, S3 buckets 
+
+Important link - https://docs.aws.amazon.com/cli/latest/reference/
+
+AWS CLI 
+
+secret access key can be seen only once . Need to regenerate and use AWS configure again 
+
+Supports linux, win, mac 
+don't share key pairs 
+
+AWS CLI paginations 
+
+- AWS cli uses page size of 1000
+- control no of items included in the op 
+
+Pagination Errors 
+- default page size of 1000 might be too high 
+- most likely to see timed out error because API call has exceeded the max allowed time to fetch results
+
+Fix for the above ;
+a) Adjust page size . use --page-size option to request smaller number of items from each api call 
+b) CLI still retrieves full list but peforms larger number of API calls in the background and retrieves smaller number of items with each call 
+
+commands 
+aws s3api list-objects --bucket my-bucket --page-size 100 
+
+..max items to retrieve fewer items 
+aws s3api list-objects --bucket my-bucket --max-items 100 
