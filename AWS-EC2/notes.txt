@@ -173,3 +173,7 @@ a) Identifying originating IP address of client connecting through load balancer
 
 Common LB errors 
 - Error 504 (Gateway timeout) - Target failed to respond (downstream service fails to respond). Check app in this case. App may have issue. App is not contactable (DB)
+
+Route 53 - 
+- DNS service 
+- Allows to map domain name to  EC2 instances, load balancers, S3 buckets 
