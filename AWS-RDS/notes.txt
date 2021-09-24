@@ -87,3 +87,25 @@ Parameter store
 -Ways of storing license keys, db connection info, usernames and pwds etc .
 - needs to be passed to EC2 instances as bootstrap script
 - maintain confidentiality and avoid hardcoding
+
+ElastiCache -
+
+- In memory cache. Key-value data store. Makes it easy to deploy, operate and scale an in-mem cache in the cloud 
+- Improved DB performance. 
+- Greate for read-heavery db workloads. IO intensive db queries. Also helpful for storing session data for distributed apps 
+
+2 types of ElastiCache 
+
+a) Memcached - Great for basic object caching. Scales horizontally but there is no persistence, multi ax or failover. Good choice if basic caching to be used 
+b) Redis - More sophisticated with enterprise features like persistence, replication, multi az and failover. Supports sorting and ranking data and complex data types like lists and hashes
+
+Scenario 
+a) Db under stress and find a solution. 
+Know when to use elasticache. elasticache to be used if read only and no frequent changes done 
+
+When elasticache is useless 
+- Heavy write loads 
+- OLAP Qieroes. DB feeling stress due to OLAp. Can use REDSHIFT instead 
+
+
+
