@@ -64,3 +64,22 @@ OLAP Example
 
 RDS - OLTP type workloads 
 RDS - not suitable for OLAP 
+
+Multi AZ 
+
+- Exact copy of prod db in another availability zone (AZ)
+- Aws handles all replication between primary and secondary 
+- when you write to prod db it syncs
+- All of them can be configured. oracle, mysql, PostgreSQL
+- Multi AZ is for DR and not for performance improvements. Can't use them simultaneously
+- To improve performance use Read replicas
+
+Read Replicas 
+- Read only copy of primary DB 
+- can be cross region 
+- has it's own dns endpoint. different from primary db 
+- can be promoted to be their own independent dbs. will break replication from primary db.
+- not for DR. only for scaling 
+- automatic backups are to be enabled. won't be able to deploy a read replica without enabling backup 
+- multiple read replicas are supported. upto 5 db instances 
+
