@@ -83,3 +83,7 @@ Read Replicas
 - automatic backups are to be enabled. won't be able to deploy a read replica without enabling backup 
 - multiple read replicas are supported. upto 5 db instances 
 
+Parameter store 
+-Ways of storing license keys, db connection info, usernames and pwds etc .
+- needs to be passed to EC2 instances as bootstrap script
+- maintain confidentiality and avoid hardcoding
