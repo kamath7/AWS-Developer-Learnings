@@ -1,0 +1,29 @@
+Relational Databases
+
+RD Basics 
+- Relational Databases have been around for many years and are heart of many apps 
+- Tables - Data organized into tables 
+- Rows - Data items 
+- Columns - Fields in the db 
+
+
+RDS applications - Online Transaction Processing (OLTP) 
+RDS Types -  SQL Server, Oracle, MySQL, PostgreSQL, Maria DB, Amazon Aurora 
+
+RDS = Up and running in mins . Multi AZ, Failover capability, automated backups
+
+OLTP & Online Analytics Processing (OLAP)
+
+OLTP - rocesses data from transaction in real time e.g. Customer orders, banking transactions, payments and Booking Systems.
+OLTP - all about data processing and completing large numbers of small transactions in real-time 
+
+OLAP - Processes complex queries to analyse historical data e.g. analysing net profit figures from past 3 yeas and sales forecasting
+OLAP - All about data analysis using large amounts of data, complex queries that take long time to complete
+
+OLAP Example 
+- Net profit analysis 
+- Large amounts of data (sum of cars sold in each region, unit cost for each region etc)
+- Analysis not transactions (RDS not suitable for this type of workload. Data warehouse like Redshift can be used)
+
+RDS - OLTP type workloads 
+RDS - not suitable for OLAP 
