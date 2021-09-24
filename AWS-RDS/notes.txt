@@ -17,6 +17,43 @@ OLTP & Online Analytics Processing (OLAP)
 OLTP - rocesses data from transaction in real time e.g. Customer orders, banking transactions, payments and Booking Systems.
 OLTP - all about data processing and completing large numbers of small transactions in real-time 
 
+Two ways to backup RDS 
+
+a) Database snapshots - Manual, adhoc and user initiated. Snapshot provided, point in time copy 
+b) Automated Backups - Enabled by default. Creates daily backups or snapshots that run during backup window that you define. Transaction logs are used to replay transactions
+
+Automated Backups 
+
+a) Point in time recovery. Recover DB at any point within a retention period of 1-35 days
+b) Full daily backup. Stores transactions log throughout the day 
+c) Recovery Process - AWS will first choose the first backup till the last time 
+
+- Stored in S3. Manual snapshots also in S3 
+- Free storage space equal to size of db 
+- Defined backup window. During backup window, storage IO will be suspended. increase in latency may be observed 
+
+snapshots-
+
+Not automated
+Done manually
+No retention period. Not deleted even after original RDS instance are deleted 
+
+snapshots allow to backup to known state 
+
+Restored version of RDS db will be a new RDS instance with a  different endpoint
+
+Encryption at Rest - 
+- Can enable Encryption at creation time by selecting Encryption option in console 
+- Encryption done using AWS KMS. AES-256 Encryption standard 
+- Includes all underlying storage, automated backup, snapshots, logs, read replicas 
+
+Can't enable Encryption on unencrypted RDS DB instance 
+Snapshots can help with encrypting an already unencrypted DB .Encrypted snapshot to be performed and Encrypted DB will be prdocued 
+
+
+
+
+
 OLAP - Processes complex queries to analyse historical data e.g. analysing net profit figures from past 3 yeas and sales forecasting
 OLAP - All about data analysis using large amounts of data, complex queries that take long time to complete
 
