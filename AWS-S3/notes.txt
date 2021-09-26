@@ -1,0 +1,40 @@
+S3
+
+- Object storage. Provides secure, durable, hughly-scalable 
+
+- Simple to use 
+- Allows to store and retreive any amount of data 
+
+Manages data as objects rather than in file systems or data blcks. Upload any file type. Photos, videos, code, documents, text files 
+Cannot be used to run an OS or DB 
+
+- Unlimited storage. total vol of data and number of objects to store is Unlimited
+- Objects can be upto 5TB in size. 0 to 5 TB 
+- Files stored in buckets (Folders)
+
+S3 has 
+- Universal namepsace. Each s3 bucket name is globally unique 
+- S3 urls - https://bucket-name.s3.Region.amazonaws.com/key-name 
+- Uploading file - Upon successful upload, will receive a HTTP 200 code 
+
+S3 is a key value store 
+key - name of the object 
+value - data itself. Sequence of data
+version id - storing multiple versions of the same object
+metadata - data about data. e.g content-type, last-modified etc.
+
+Data is spread across multiple devices and facilities to ensure availability and durability 
+
+S3 is highly available 
+Built for 99.95% and 99.99% service availability depending on s3 tier 
+Designed for 99.999999999% durability for data stored in S3 
+
+S3 also is 
+- Tieried storage. Offers range of storage classes designed for different use case 
+- Lifecycele gmt - Defines rules to automatically transition object to cheaper storage tier or delete objects that are o longer required after set period of time 
+- versioning - all version of object are stored and can be retrieved, including deleted objects 
+
+Security 
+- Server side encrytipon - Default encryption on bucket 
+- ACL (Access COntrol Lists)- Define structure for ACcess and type of access 
+- Bucket Policies - Specify which actions you are allowed or denied 
