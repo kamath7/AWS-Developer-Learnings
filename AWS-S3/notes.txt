@@ -84,5 +84,23 @@ automatically moves data to most cost-effective tier based how frequently you ac
 - monthly fee of $0.0025 per 1000 objects
 - 99.99999999999 (11 9's) durability
 
+S3 Security 
+- Very secure by default 
+- By default, all newly created buckets are Private 
+- By default only bucket owner can upload new files, read files, delete files etc 
+- No public access by default 
 
+Bucket policies 
+- Applied at bucket level 
+- not individual objects 
+- Groups of files 
+- Written in json. 
+
+Bucket Access Control Lists 
+- Applied at object level 
+- Different perms to different objects 
+- Which accts or groups are granted access also type of access(read, write , full ctrl)
+- Fine grained control 
+
+S3 access logs= log all requests to the s3 bucket 
 
