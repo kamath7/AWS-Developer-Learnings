@@ -38,3 +38,51 @@ Security
 - Server side encrytipon - Default encryption on bucket 
 - ACL (Access COntrol Lists)- Define structure for ACcess and type of access 
 - Bucket Policies - Specify which actions you are allowed or denied 
+
+S3 Storage class 
+
+S3 Standard, S3 standard infrequent Access, S3 one zone infrequent access, S3 glacier, s3 glacier deep archive, intelligent tiering
+
+S3 standard 
+- High availability and durability.Stored across multiple devices. 
+- Designeed for frequent access 
+- Suitable for most workloads. use cases -> Websites, content distribution, mobile and gaming apps, big data analytics 
+
+s3 - IA 
+- Rapid access but accessed infrequently. 
+- You pay to access the data. Low per GB storage price and a per GB retreival fee 
+- Long term storage, backups and as a data store for disaster recovery 
+- 99.99999999999 (11 9's) durability
+
+s3 one zone ia 
+- Data stored redundantly within a single AZ 
+- Costs 20% less than regular s3-ia 
+- great for long-lived, infrequently accessed, non-critical data 
+- 99.99999999999 (11 9's) durability
+
+Glacier
+2 glacier options 
+- Very cheap storage 
+- Very infrequently accessed (3 or 4 time a year)
+- Pay each time you access data
+- used only for archiving 
+
+Regular glacier 
+- long term data archiving. Retrieval time 1 min to 12 hrs. 
+- Great for historical data 
+-  for quick retreival, pay extra 
+
+Glacier Deep archive 
+- archiving rarely accessed data with default retreival time of 12 hours 
+- Financial records for access once per year or twice 
+
+S3 intelligent tiering 
+
+- 2 tiers - frequent and infrequent 
+automatically moves data to most cost-effective tier based how frequently you access each object 
+- optimised cost 
+- monthly fee of $0.0025 per 1000 objects
+- 99.99999999999 (11 9's) durability
+
+
+
