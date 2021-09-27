@@ -123,3 +123,33 @@ x-amz-server-side-encryption: aws:kms (SSE KAMS - KMS managed keys)
 When parameter included in header of put request tell S3 on encryption method 
 
 
+CDN
+- System of distributed servers which deliver webpages and other web content. Easy & cost effective way to distribute content with low latency and high data transfer speeds
+
+Edge location 
+- Collection of servers in a geographically dispersed locations. Contain copy of content you are serving
+
+Cloudfront terminology 
+- Cloudfront Edge location - where content is cached. separate to an aws region/az 
+- Cloudfront Origin - origin of all files that distribution will serve. can be ec2 instance, s3 bucket, elb or route 53
+- Cloudfront distribution - name given to origin and config settings for content you wish to distribute using CDN 
+
+Cloudfront uses 
+- Imporves perforamance of website 
+- Operates at global network of 200+ edge locations
+-requests routed to nearest edge location
+- allows to optimise perforamance for users accessing website from all around the world 
+
+Cloudfront optimised with other AWS 
+- Optimized 
+- Integrated with AWS services
+_ Your own server (also works seamlessly with any non origin AWS server)
+
+TTL 
+- Time to Live 
+- Objects are cached for period of time which is their time to live 
+- default TTL - 1 day and when ttl is up object automatically cleared from cache 
+- Can clear object from cache yourself before TTL is up but there will be a charge 
+
+Cloudfront & S3 transfer acceleration 
+- Enables fast, easy, secure transfer of files over long distances between end users and s3 bucket 
