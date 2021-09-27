@@ -155,3 +155,5 @@ Cloudfront & S3 transfer acceleration
 - Enables fast, easy, secure transfer of files over long distances between end users and s3 bucket 
 
 Edge locations are not only read only but can also be written into (Put objects to them )
+
+Restrict for paid content -  signed url or signed cookies 
