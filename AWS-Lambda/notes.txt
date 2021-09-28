@@ -44,3 +44,28 @@ AWS Service that invoke lambda
 - cloudwatch 
 - codecommit 
 - codepipeline 
+
+API 
+- interact with web api. and also apps use to communicate with each other 
+
+API gateway -
+
+Publish , maintain and monitor apis at any scale 
+frontdoor for apps to access data, business logic or functionally from backend services
+supported api types- restful apis, websocket apis(real time) 
+
+restful apis 
+- Optimised for serverless and web apps 
+- stateless. nothing held 
+- support json 
+
+API gateway provides single endpoint for all client traffic interacting with backend of application
+
+- allows to connect apps to lambda, ec2, elastic beansstalk 
+- supports multiple endpoints and targets
+- supports multiple version on apis . diff for beta, prod stages 
+
+API gateway 
+- serverless 
+- integrated with cloudwatch 
+- supports throttling. managing traffic thru throttling
