@@ -1,0 +1,18 @@
+Serverless 
+
+- Allows to run application code in cloud without having to worry about any servers
+-AWS handles infra mgmt tasks so that focus is on code 
+
+AWS handles
+-  Capacity provisioning
+- patching
+-auto scaling
+- high availability
+
+Competitive advantage
+- Speed to market. Release code quickly and release 
+- Extremely scalable - scales automatically 
+- Lower costs. no overprovisioning
+- event drvien . only charge when executed 
+- focus on application . instead of configuring infra 
+
