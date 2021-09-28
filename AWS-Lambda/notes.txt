@@ -16,3 +16,31 @@ Competitive advantage
 - event drvien . only charge when executed 
 - focus on application . instead of configuring infra 
 
+
+What is Lambda 
+
+- Serverless compute - runs code in aws without provisioning in aws 
+- lambda takes care of everything 
+- Support for Go, Java, Node js 
+- upload code and Go
+- Enterrpsie feature auto scaling 
+
+- Charged based numberof requests, duration and amount of memory used by Lambda function 
+- Request - first 1 mil reqs per month are free, $0.20 / million reqs after that 
+- duration - charged 1 millisecond increments . price depends on amount of memory allocated to lambda func 
+- Price per gb-second 
+
+Lambda - event driven architecture 
+- Event driven. auto triggerred by other aws services 
+- triggerred by events. changes made to data in s3 bucket or dynamodb table 
+- triggerred by user reqs. using api gateway to configure http endpoint
+
+AWS Service that invoke lambda  
+- dynamodb
+0 alexa
+- sns 
+- sqs 
+- cloudformation
+- cloudwatch 
+- codecommit 
+- codepipeline 
