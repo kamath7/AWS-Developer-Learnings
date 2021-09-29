@@ -140,3 +140,28 @@ Annotations and indexing
 - Annonations - record additional info on requests by using Annotations
 - simply key value pairs indexed for use with filter expressions 
 
+API Gateway caching and throttling
+- API gateway caching 
+- caches endpoints resources
+- TTL - when caching enabled, api gateway caches responses from endpoint for a specified time to live period in seconds . default is 300 seconds 
+- APi gateway returns cached responses 
+
+- Helps improve performance of api by caching output of api calls 
+API gateway throttling -
+-  prevent api from being overwhelmed by too many requests 
+- default limits - 10000 reqs per second per region 
+- max concurrent reqs 5000 reqs per region. 
+- 429 error on the above two reqs 
+
+Advanced API Gateway 
+
+- Import apis to api gateway 
+- importing api definition files. using gateway import api feature 
+- supported protocol - OpenAPI previously Swagger 
+- Create  new and update existing apis 
+
+- Can configure api gateway as a SOAP web service passthrough
+- can also uuse api gateway to transform xml response to json
+
+
+
