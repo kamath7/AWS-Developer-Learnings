@@ -79,4 +79,13 @@ Lambda versions
 - alias - pointer to specific version of func code 
 - if app uses alias , need to update ARN that is being used if new code is to be used
 
+Concurrent executions
+- there is a Concurrent execution limit for lambda 
+- safety feature to limit no of concurrent executions across all funcs in given region per acct 
+- default - 1000 per region 
+- limit reached. error -> TooManyRequestsException
+- HTTP status code received - 429 
+- request throughput limit exceeded
+- reserved concurrency guarantees that set number of execution which will be available for critical function 
+- Remedy to get limit raised is talking to AWS support
 
