@@ -111,3 +111,19 @@ Manage logic of app
 - includes sequencing, error handling and retry logic. 
 - step funcs also log state of each step 
 
+X-Ray 
+
+- tool which helps devs analayse and debug distributed apps 
+- allow to troubleshoot the root cause of performance issues and errors
+- provided visualisation of app's underlying components 
+- provides end to end view of requests as they travel through the app 
+- integrates with ec2, ecs, lambda, beanstalk, sns 
+- can integrate with own apps written in Go , Ruby, Python, Node.ks
+- API call. automatically captures metadata for api calls made to aws services using aws sdk 
+
+To get XRay working 
+- Insall x-ray agent on Ec2 instance 
+- configure application using the X-ray sdk 
+- Xray sdk gather info from req and res header, code in app and metadata about aws resiources on which it runs 
+
+
