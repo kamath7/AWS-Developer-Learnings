@@ -126,4 +126,17 @@ To get XRay working
 - configure application using the X-ray sdk 
 - Xray sdk gather info from req and res header, code in app and metadata about aws resiources on which it runs 
 
+Xray Config 
+- Xray sdk sends data to xray daemon which buffers segments in queue array and uploads them to x-ray in batches 
+- need both xray sdk and xray daemon on systems
+- use sdk to instrument your app to send required data. e.g. data about incoming and outgoing http request to your app 
+
+High level xray config steps 
+a) on premises and ec2 instanc - install xray daemon on ec2 instance 
+b) elastic beansstalk - install xray daemon on ec2 instances inside eb env 
+c) elastic container service - install xray daemon in own docker container on ecs cluster alongside app
+
+Annotations and indexing 
+- Annonations - record additional info on requests by using Annotations
+- simply key value pairs indexed for use with filter expressions 
 
