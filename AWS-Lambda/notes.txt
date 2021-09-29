@@ -69,3 +69,14 @@ API gateway
 - serverless 
 - integrated with cloudwatch 
 - supports throttling. managing traffic thru throttling
+
+Lambda versions 
+
+- When lambda function created, only one version - $LATEST
+- When new version of code uploaded, that version will be $LATEST
+- Can create multiple versions of function code and user aliases to reference version you want to use as part of arn 
+- in dev env , need to maintain few versions of same func as code is developed and tested 
+- alias - pointer to specific version of func code 
+- if app uses alias , need to update ARN that is being used if new code is to be used
+
+
