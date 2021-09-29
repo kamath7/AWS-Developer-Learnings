@@ -89,3 +89,16 @@ Concurrent executions
 - reserved concurrency guarantees that set number of execution which will be available for critical function 
 - Remedy to get limit raised is talking to AWS support
 
+Lambdas and VPC 
+
+- Some use cases require lambda to access resource inside private VPC . e.x. read/write to RDS db or shut down EC2 instance for a security alert 
+
+
+To enable lambda to access vpc resources 
+- need to allow function to conecct to the private subnet 
+- lambda needs vpc config info such as 
+1) Private Subnet ID 
+2) security group id (with required access) 
+3) Lambda uses this info to setup ENIs using available IP address from private subnet
+- add vpc info to lambda function config using vpc-config parameter 
+
