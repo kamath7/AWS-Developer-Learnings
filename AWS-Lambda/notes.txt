@@ -102,3 +102,12 @@ To enable lambda to access vpc resources
 3) Lambda uses this info to setup ENIs using available IP address from private subnet
 - add vpc info to lambda function config using vpc-config parameter 
 
+Step Functions - 
+- Visual interface for serverless apps which enables to build and run serverless apps as series of steps 
+- Each step in application executes in order as defined by business logic 
+- Orchestration for serverless apps 
+
+Manage logic of app 
+- includes sequencing, error handling and retry logic. 
+- step funcs also log state of each step 
+
