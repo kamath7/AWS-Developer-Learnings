@@ -1,0 +1,33 @@
+Dynamo DB
+
+- Fast and flexible nosql db. consistent, single digit ms latency at any scale 
+- Fully managed - supports key-value data models. supported doc formats are json, html and xml 
+- Serverless - Integrates well with lambda. Good for Serverless apps 
+- Stored on SSD storage. enhances performance 
+- Resilience . Spread across 3 geographically distinct data centres 
+- Consistency - eventually consistent reads (default). strongly consistent reads 
+
+eventually consistent reads 
+- Consistency across all copies of data usually reached within a asecond. best for read performance 
+
+strongly consistent reads 
+- reflects all successfull writes. writes are reflected across all 3 locs at once. best for read consistentcy
+
+ACID transactions 
+- provide ability to perform ACID (Atomic, consistent, Isolated, Durable)
+
+DynamoDB Primary key
+- primary key. stores and retrieves data based on primary key 
+- two type. - partition key and composite key (partition key + sort key )
+
+partition key - 
+- unique attribute (customer_id ). value of partition key is input to internal hash func which determines the partition or physical loc on which the data is stored .
+- if using partition key as primary key, no two keys are allowed the same values 
+
+composite key 
+- partition key + sort key 
+- partition key not unique in table (e..g forum posts )
+- Unique combination - items in table may have same partiriton key but ehy must have different sort key 
+- storage - all items with same partition key are stored together and then sorted according to the sort key value .
+
+
