@@ -62,3 +62,33 @@ Global secondary index
 - speeds up queries 
 - partition key - email , sort key - last log in date 
 - flexible - can create when table is created or add it later 
+
+Scan and Query API calls 
+
+- Query - Finds items in table based on primary key attribute and distinct value to search for 
+- Refine query using optional sort key name value to refine results 
+- by default query returns all attributes for items you select but can use ProjectionExpression parameter if needed 
+
+- Sort Key - results always sorted by sort key 
+- Numeric Order - Ascending numeric order by default 
+- ASCII - character code values 
+- Reverse the order - use the setting ScanIndexForward parameter to false 
+- eventually consistent - by default queries are eventually consistent
+- strongly consistent - need to explicitly set query to be strongly consistent
+
+- Scan - scan operation examines every item in the table. by default , it return all data attributes. use ProjectionExpression parameter if needed 
+
+Query or scan 
+- Query much more efficient than scan. scan dumps entire table and then filters out. 
+- extra step in scan 
+- scan on large table affects provisioned througput 
+
+Improve Query or scan performance 
+- set smaller page size (set page items to 40)
+- runnign large number of smaller operation will allow other requests to succeed without throttling
+- avoid scans
+- Parallel scans can be used - 
+- regular partition - one partition at a time. Parallel will scan logically divided segment 
+- Avoid parallel scans if db is under heavy stress 
+- isloate scan operations to specific table and segregate them from mission-critical traffic . evan if it means writing to 2 different tables
+
