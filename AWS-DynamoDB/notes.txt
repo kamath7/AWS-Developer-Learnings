@@ -120,3 +120,17 @@ dax not suitable for
 - cater for eventually consistent reads. not for strongly consistent reads.
 - not suitable for write intensive apps 
 - application that don't perform many read ops 
+
+TTL(Time to Live) - expiry time for data. expired items marked for deletion. good for removing irrelevant or old data. TTL time is in Epoch time 
+
+dynamdodb streams 
+
+- Time ordered sequence - Sequence of item level modifications (e.g. insert update delete)
+- Logs ( encrypted at rest and stored for 24 hrs )
+- Used for auditing, archiving etc. 
+- really good for Serverless architectures 
+- streams are accessed using their dedicated endpoint 
+- Primary key - by default primary key is restored 
+- Images - before and after images can be captured 
+- use cases - audit or archive transactions, trigger an event based on particular transaction or replicate data across multiple tables 
+- Near real time - applications can take actions based on contents of stream. Dynamodb stream can be event source for lambda. 
