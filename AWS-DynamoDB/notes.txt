@@ -31,3 +31,34 @@ composite key
 - storage - all items with same partition key are stored together and then sorted according to the sort key value .
 
 
+Primary key -> Hash key 
+
+Dynamo DB Control Access 
+- Using IAM . Auth and access managed thru AWS IAM 
+- IAM Perms - can create iam users within aws acct with specific perms to access and create dynamodb tables 
+- IAM roles - can create iam roles enabling temp acccess to dynamodb
+
+Restricting user access 
+- special iam condition to restrict user access to only their own records
+- condition to an iam policy to allow acces sonly to items where partition key value matches user_id-
+- dynamodb:LeadingKeys - allows users to access only items where partition key value matches user id 
+
+Secondary Index 
+- flexible Querying  - Query based on an attribute that is not the primary key 
+- Dynamdodb allows to run query on non-priary key attrivutes using global secondary indexes and local secondary indexes
+
+- secondary index allows to perform fast queries on specific columns in a table. select columns that are wanted in the index and run searches on the index rather than on entire dataset
+
+Local Secondary index 
+- primary key - same partition key as orgiinal table but different sort key 
+- gives different view of data, organized accroding to alternative sort key 
+- faster queries - any queries based on this sort key are much faster using index than main table 
+- example - partition key - user id and sort key - acct creation date
+- Add at creation time - can only be created when creating the table. cannot add, remove, modify later 
+
+Global secondary index 
+- completely different primary key (different partition key and sort key)
+- view data differently - gives completely different view of data 
+- speeds up queries 
+- partition key - email , sort key - last log in date 
+- flexible - can create when table is created or add it later 
