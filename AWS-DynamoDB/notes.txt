@@ -98,5 +98,10 @@ Provisioned Throughput
 - specify requirements - can specify requirements in terms of read and write capacity unites 
 - 1 write capacity unit = 1 * 1KB write per second 
 - 1 read capacity unit - 1 strongly consistent read of 4kb per second or 2 x eventually consistent reads of 4kb per second (default)
+ 
+DynamoDB on Demand capacity
 
-
+- Pricing model for dynamo db - charges apply for reading, writing and storing data- dynamdodb instantly scales up and down based on activity of app 
+- great for unpredictable workloads, new apps, pay for only what you use 
+- On demand capacity to be used for unknown workload, unpredictable app traffic, spiky short lived peaks, pay per use model is desired, might be difficult to predict the cost 
+- Provisioned capacity - Read and write capacity requirmeents can be forecasted, predctible app traffiiic, app traffic is consistent or gradual, more control on dynamo db cost 
