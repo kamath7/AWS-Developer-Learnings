@@ -134,3 +134,11 @@ dynamdodb streams
 - Images - before and after images can be captured 
 - use cases - audit or archive transactions, trigger an event based on particular transaction or replicate data across multiple tables 
 - Near real time - applications can take actions based on contents of stream. Dynamodb stream can be event source for lambda. 
+
+Provisioned Throughput exceeded
+- ProvisionedThroughputExceededException - request rate is too high for the read/write capacity provisioned on DynamoDB table 
+- SDS if used will auto retry requests until successful 
+- if not, use exponential backup or reduce request frequency 
+
+Overload Components
+- In addition to simple retries, all aws sdks use exponential backoff. it uses progressively longer waits between consecutive retries for improved flow control 
