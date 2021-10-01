@@ -92,3 +92,11 @@ Improve Query or scan performance
 - Avoid parallel scans if db is under heavy stress 
 - isloate scan operations to specific table and segregate them from mission-critical traffic . evan if it means writing to 2 different tables
 
+
+Provisioned Throughput 
+- Measeured in capacity units 
+- specify requirements - can specify requirements in terms of read and write capacity unites 
+- 1 write capacity unit = 1 * 1KB write per second 
+- 1 read capacity unit - 1 strongly consistent read of 4kb per second or 2 x eventually consistent reads of 4kb per second (default)
+
+
