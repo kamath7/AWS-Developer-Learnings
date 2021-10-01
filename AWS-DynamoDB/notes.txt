@@ -105,3 +105,18 @@ DynamoDB on Demand capacity
 - great for unpredictable workloads, new apps, pay for only what you use 
 - On demand capacity to be used for unknown workload, unpredictable app traffic, spiky short lived peaks, pay per use model is desired, might be difficult to predict the cost 
 - Provisioned capacity - Read and write capacity requirmeents can be forecasted, predctible app traffiiic, app traffic is consistent or gradual, more control on dynamo db cost 
+
+DAX (Dynamo DB accelarator)
+- Fully managed, clustered in memory cache for dynamdodb
+- Delivers up to 10x read performance improvements 
+- ideal for ready heavy workloads (retail site, gaming sites, auction sites )
+- DAX is write through caching service. data is written to cache and backend store at same time. 
+- allows to point dynamodb api calls at dax clustered- if item querying for is in the cache , dax will return. if item not avialble, dax perform eventually consistent GetItem op against dynamodb and return result of api call
+
+Retrieval of data from dax 
+- reduces read load on dynamdob tables. 
+
+dax not suitable for 
+- cater for eventually consistent reads. not for strongly consistent reads.
+- not suitable for write intensive apps 
+- application that don't perform many read ops 
