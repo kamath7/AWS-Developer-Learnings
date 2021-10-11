@@ -1,0 +1,15 @@
+KMS
+
+- Key Management Service 
+- Managed service that makes it easy to create and control encryption keys used to encrypt data 
+- completely integrated with many aws services. seamless integration 
+- simple to encrypt data with encryption keys 
+- When to use - Whenever sensitive data is used. e.x. - financial data, customer data, db passwords, credentials
+- some aws services with kms - s3, rds, dynamodb, lambda, EBS, cloudtrail(can get audit trail)
+
+CMK 
+- Custoemr Master Key 
+- Capable of encrypting and decrypting data upto 4KB 
+- used for generating, encrypting and decrypting data key 
+- data key then used to encrypt/decrypt data 
+- Envelope encryption
