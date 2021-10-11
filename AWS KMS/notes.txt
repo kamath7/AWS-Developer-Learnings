@@ -20,3 +20,11 @@ CMK
 - key state - enabled, disabled, pending deletion, unavailable
 - key material - customer-provided or aws-provided
 - can never be exported 
+
+Envelope Encryption 
+
+- Process for encrypting data. applies to files > 4KB 
+- Process - Use generateDataKey API which will create data key (envelope key) which is used to encrypt data. Stored locally with the data to be used for decryption later 
+- KMS decrytion process - encrypted data (data key) with data/ AWS Kms decryptes in plain text form
+- Why EE? - encrypt data directly with kms leads to using of network, with EE only data key goes over network not data. Data key used locally in app or aws service avoids the need to transfer large amount of data to KMS
+- 
