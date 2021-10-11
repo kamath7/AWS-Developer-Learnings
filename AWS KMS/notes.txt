@@ -13,3 +13,10 @@ CMK
 - used for generating, encrypting and decrypting data key 
 - data key then used to encrypt/decrypt data 
 - Envelope encryption
+
+- Can refers to alias when using cmk 
+- date and time when cmk was created 
+- can add own descriptio to describe cmk 
+- key state - enabled, disabled, pending deletion, unavailable
+- key material - customer-provided or aws-provided
+- can never be exported 
