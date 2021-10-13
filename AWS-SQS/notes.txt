@@ -78,4 +78,11 @@ SES
 - incoming email to trigger lambda and sns 
 - Can use ses to - send automated emails (new post in some form), purchase confirmations, marketing emails (ads)
 - ses - email messaging service, can trigger lambda func , can be used for both incoming and outgoing email , email address is required for sending msgs 
-- sns - pub/sub messaging service, can trigger lambda func, can fanout message to large number of recipient 
+- sns - pub/sub messaging service, can trigger lambda func, can fanout message to large number of recipient
+
+Elastic Beanstalk 
+- Deploy and scale web apps. 
+-supported langs - java, .net, node js , python 
+- supported platforms - apache, http server, tomcat
+- focus on writing code and don't worry about infra to run apps 
+- handles infra (load balancer, ec2 instances), app platform maintenance , you are in control 
