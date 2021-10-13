@@ -13,3 +13,18 @@ AWS SQS
 - guarantess messages will be processed atleast once 
 - upto 14 days messages can be kept in queue from one min to 14 days 
 - default retention period - 4 days 
+
+SQS queue types 
+- 2 types of queues - Standard queue, FIFO queue 
+- standard queue - default which provides best-effort ordering 
+- fifo - first in first out. order is strictly preserved 
+
+Standard Queue 
+- nearly unlimited no of transactions per second
+-  guarantess message is delivered atleast once 
+- best effort ordering which ensures messages delivered in same order they are sent 
+
+FIFO Queue 
+- order in which messages are sent and received strictly preserved
+- message is delivered once and remains available until consumer processes and deletes it. duplicates not introduced 
+- fifo queues are limited to 300 transactions per second but have all capabilities of standard queues
