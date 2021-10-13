@@ -29,3 +29,10 @@ FIFO Queue
 - message is delivered once and remains available until consumer processes and deletes it. duplicates not introduced 
 - fifo queues are limited to 300 transactions per second but have all capabilities of standard queues
 -good for banking transactions which need to happen in strict manner 
+
+SQS settings 
+- Visibility timeout - amount of time that message is invisible in sqs queue after reader picks up that message. default timeout 30 secs 
+-  if job not processed within that time, message will become visible again and another reader will process it 
+- max Visibility timeout is 12 hrs 
+- Short polling - returns response immediately even if message queue being polled is empty. can result in lot of empty responses if nothing in queue. will have to pay for these resources
+- Long Polling  - periodically polls the queue, doesn't return response until message arrives in message queue or long poll times out, can save money, long polling is generally preferred over short polling 
