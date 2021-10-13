@@ -28,3 +28,4 @@ FIFO Queue
 - order in which messages are sent and received strictly preserved
 - message is delivered once and remains available until consumer processes and deletes it. duplicates not introduced 
 - fifo queues are limited to 300 transactions per second but have all capabilities of standard queues
+-good for banking transactions which need to happen in strict manner 
