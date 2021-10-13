@@ -57,3 +57,17 @@ a) specify messages are always stored in amazon s3 or only messages > 256 kb
 b) send message which references a message object stored in s3 
 c) get message object from s3 
 d) delete message object from s3 
+
+SNS  
+- Simple Notification Service 
+- service to setup, operate and send notifications from the cloud 
+- messages sent from app can be immediately delivered to subscribers or other apps 
+- Push notifications - to devices such as ios, android , sms and email (can send to SQS also), trigger lambda function to process info in the msg, publish to another sns topic, or send msg to another aws service 
+- pub and sub model - application publish or push messages to topic. subscribers receive messages from topic 
+- notifications delivered using push mechanism. eleminates need to periodically check or poll for new info and updates 
+- topic - access point, allowing recipients to subscribe to and receive identical copies of same Notification. sns delivers appropriately-formatted copies of the message to each subscriber 
+- Durability  - durable storage, prevents messages from being lost . all messages published to sns are stored redundantly across multiple azs 
+- benefits - instantaneous, simple to setup and use , flexible, inexpensive, easy to configure, managed service 
+- SNS - messaging service, sns is push based and are basically push notifications 
+- SQS - messaging service, sqs is pull based (held in  a queue), think polling the queue for messages 
+
