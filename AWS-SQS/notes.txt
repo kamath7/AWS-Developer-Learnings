@@ -71,3 +71,11 @@ SNS
 - SNS - messaging service, sns is push based and are basically push notifications 
 - SQS - messaging service, sqs is pull based (held in  a queue), think polling the queue for messages 
 
+SES 
+- Simple email service 
+- Scalable and highly available email service . pay as you go model 
+- send and receive email . incoming email to s3 bucket 
+- incoming email to trigger lambda and sns 
+- Can use ses to - send automated emails (new post in some form), purchase confirmations, marketing emails (ads)
+- ses - email messaging service, can trigger lambda func , can be used for both incoming and outgoing email , email address is required for sending msgs 
+- sns - pub/sub messaging service, can trigger lambda func, can fanout message to large number of recipient 
