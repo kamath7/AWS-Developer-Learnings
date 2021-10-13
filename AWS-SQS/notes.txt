@@ -36,3 +36,24 @@ SQS settings
 - max Visibility timeout is 12 hrs 
 - Short polling - returns response immediately even if message queue being polled is empty. can result in lot of empty responses if nothing in queue. will have to pay for these resources
 - Long Polling  - periodically polls the queue, doesn't return response until message arrives in message queue or long poll times out, can save money, long polling is generally preferred over short polling 
+
+SQS delay queues
+- postponse delivery of new messages to queue for number of seconds 
+- mmessage sent to delay queue remain invisible to consumers for duration of delay period 
+- default delay is 0 seconds, max is 900 
+- for standard queues, changing setting no affect the delay of msgs already in queue only new message 
+- fifo queue - affects delay of messages already in queue 
+- delay queue only to be used when 
+a) large distributed apps which may need to introduce delay in processing
+b) need to apply delay to entire queue of messages
+
+Best practice for managing large sqs messages using s3 
+- for large sqs messages - 256 kb upto 2gb in size 
+- use s3 to store the messages 
+- need to use AMAZON sqs extended client library for java to manage them 
+- need the aws sdk for java - provides api for s3 bucket and object operations 
+-  AMAZON sqs extended client library for java  allows to 
+a) specify messages are always stored in amazon s3 or only messages > 256 kb 
+b) send message which references a message object stored in s3 
+c) get message object from s3 
+d) delete message object from s3 
