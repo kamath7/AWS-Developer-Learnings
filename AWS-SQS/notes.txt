@@ -1,0 +1,15 @@
+AWS SQS
+
+- One of the oldest services from AWS 
+- Message queue service
+- Enables web service apps to quickly queue messages that one components generate and anopther consumes 
+- temporary repo for messages awaiting processing
+- Visibility timeout - time for app server to process the message 
+- removes dependencies upon individual components. Decoupling infrastructure 
+- Queue resolves issue that arise if procuder is producing work faster than the consumer can process it or if producer or consumer are only intermittently connected to netwrok
+- SQS - Pull based not push based, 
+- 256 kb in size messages
+- text data including xml, json and unformatted text
+- guarantess messages will be processed atleast once 
+- upto 14 days messages can be kept in queue from one min to 14 days 
+- default retention period - 4 days 
