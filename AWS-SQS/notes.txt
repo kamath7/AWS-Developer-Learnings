@@ -110,3 +110,11 @@ EB Config files
 - file must have a .config extension and be inside a folder called .ebextensions 
 - .ebextensions folder must be included in top-level directory of app source code bundle 
 - config files can be placed under source control along with rest of code 
+
+
+RDS with EB 
+- 2 ways of integrating RDS DB into EB .
+- can integrate inside EB or outside EB 
+- launch rds instance from within the elastic Beanstalk console if env terminated, db also terminated 
+- launch rds instance out of eb. use rds console or aws cli. can terminate app env without affecting db instance . preferred approach for prod systems
+- For connecting to external DB - additional sg must be added to env's sg. provide connection string info to app servers using EB env properties.
