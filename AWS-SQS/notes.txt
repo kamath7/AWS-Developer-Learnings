@@ -86,3 +86,20 @@ Elastic Beanstalk
 - supported platforms - apache, http server, tomcat
 - focus on writing code and don't worry about infra to run apps 
 - handles infra (load balancer, ec2 instances), app platform maintenance , you are in control 
+
+Updating EB 
+- All at once - deploys to all hosts concurrently 
+- Rolling updates - deploys new versions in batches 
+- Rolling with Additional Batch - launches an additional batch of isntances then deploys new version in batches
+- Immutable - deployes new version to fresh group of instances before deleting old instances 
+- Traffic splitting  - install new version on new set of instances like immutable deployment. some traffic to old version and some to new version 
+
+Which approach to choose?
+- All at once - will experience total outage. not ideal for mission-critical production systems. if update fails, rollback changes by re-deploying. another outage during deployment. only time to use is during development or test env not for prod env 
+- Rolling deployment - deployed in batches. batch taken out of service while deployment takes place. env capacity will be reduced by no of instances in batch while deployment takes place. not ideal for performance sensitive systems. if update fails, rollback to be performed 
+- additional batch - laucnhes additional batch. deploys new version. maintains full capacity 
+- Immutable deployment - launched into fresh group of instances. only when new instances health check pass, old instances are to be terminated. preferred method. 
+
+Traffic splitting - Enables Canary testing 
+- installs new version on new set of isntances just like immutable deployment 
+- forwards percentage of incoming client traffic to new app version for specified evaluation period 
