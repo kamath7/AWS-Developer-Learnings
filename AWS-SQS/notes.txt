@@ -118,3 +118,23 @@ RDS with EB
 - launch rds instance from within the elastic Beanstalk console if env terminated, db also terminated 
 - launch rds instance out of eb. use rds console or aws cli. can terminate app env without affecting db instance . preferred approach for prod systems
 - For connecting to external DB - additional sg must be added to env's sg. provide connection string info to app servers using EB env properties.
+
+AWS Kinesis 
+
+- Family of services to collect , process and analyse streaming data in real time. allows to build custom apps for business needs 
+- streaming data - data generated continously by many data sources which send data records simultaneously and in small sizes. - financial transactions, location tracking data, game data 
+
+Kinesis streams - stream data and vids to allow to build custom apps that process data in real time 
+Kinesis data firehose - capture, transform, load data streams into aws data stores to enable near real time analytics with BI tools 
+Kinesis Data analytics - Analyse, query and transsform streamed data in real0time using standard sql and store results in aws data store 
+
+Kinesis streams - 24 hours- 7 day retention. stored in shards. Consumers can be ec2 instances, lambdas etc   
+Kinesis Shards - streams are made of shards, each shard is sequence of one more data records and provides fixed unit of capacity, five read per second and max total read rate is 2mb per second, 1000 writes per second, max total write rate is 1mb per second 
+Data capacity of stream is determined by no of shards. if data rate increases, no of shards increases
+
+Kinesis video streams - securely stream video from connected devices to aws. Videos can be used for analytics and machine learning 
+
+Kinesis Data firehose - No data retention. upon receiving data, either picked up lambda and processed or stored in s3 or elastisearch 
+-Realtime analytics - Kinesis data analytics
+
+
