@@ -103,3 +103,10 @@ Which approach to choose?
 Traffic splitting - Enables Canary testing 
 - installs new version on new set of isntances just like immutable deployment 
 - forwards percentage of incoming client traffic to new app version for specified evaluation period 
+
+EB Config files 
+- Config - define packages to install, create linux users and groups, run shell commands
+- Files written in YAML or JSON 
+- file must have a .config extension and be inside a folder called .ebextensions 
+- .ebextensions folder must be included in top-level directory of app source code bundle 
+- config files can be placed under source control along with rest of code 
