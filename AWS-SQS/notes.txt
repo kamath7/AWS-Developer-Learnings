@@ -137,4 +137,15 @@ Kinesis video streams - securely stream video from connected devices to aws. Vid
 Kinesis Data firehose - No data retention. upon receiving data, either picked up lambda and processed or stored in s3 or elastisearch 
 -Realtime analytics - Kinesis data analytics
 
+Kinesis Client Library  
+- KCL ensure every shard there is a record processor 
+- manages numbeer of record processors relative to number of shards and consumers 
+-  if you have only one consumer, KCL will create all record processors on single consumer 
+- if ytou have two consumers, it will load balance and create half the processors on one isntance and half on another
+- with kcl, can ensure that number of instances does not exceed number of shards 
+- never need multiple instances to handle processing load of one shard 
+- however one worker can process multiple shards 
+- can use cpu utilisation that should drive quantity of consumer instances and not number of shards. can use auto scaling groups 
+
+
 
