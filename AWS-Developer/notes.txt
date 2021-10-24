@@ -82,3 +82,12 @@ Run order -
 - BeforeAllowTraffic - Tasks you want to run on instances before they're registered with load balancer 
 - AllowTraffic - Register instances with load balancer 
 - After - Tasks you want to run on instances after they are registered with Load Balancer 
+
+
+Code Pipeline 
+
+- Fully managed CI/CD service 
+- Orchestrates build, test & deployment 
+- Automated Release process - Fast, consistent. enables quick release of new features and bug fixes 
+- CodePipeline integrates with other CodeCommit, CodeBuild, GitHub, Jenkins, Elastic Beanstalk 
+- Process - Workflow defined, New Code Appears, Code is Built and Tested, Application Deployed
