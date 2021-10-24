@@ -14,3 +14,8 @@ CI/CD
 - Code Deploy - automates code deployments to any instance - EC2, lambda 
 - Code Pipeline  - End to end sol, build, test and deploy app every time there is a change 
 AWS Whitepaper - Practice CI&CD on AWS. 
+
+Code Commit 
+- Central code repo to store source code, binaries, images, libraries 
+- manages updates from multiple sources. allows collaboration and maintains version history 
+- 
