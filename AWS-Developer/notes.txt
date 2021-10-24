@@ -18,4 +18,29 @@ AWS Whitepaper - Practice CI&CD on AWS.
 Code Commit 
 - Central code repo to store source code, binaries, images, libraries 
 - manages updates from multiple sources. allows collaboration and maintains version history 
-- 
+
+
+Code Deploy -
+
+- Automated deployment service. Works with EC2 instances, on-premises and lambda 
+- Quickly release new features 
+- Two deployment approaches - in place and blue/green
+- In place - application stopped on each instance and new release is installed. also known as rolling update
+- Blue/Green - new instances provisioned and new release is installed on new instances. blue represent active deployment and green is new release 
+
+- Codedeploy installs new version known as revision 
+- instance comes back into service 
+- codedeploy continues to deploy to next instance 
+
+- Rollback - No quick fix. with in place, need to redeploy previous version which canbe time consuming 
+- Blue green - green instances are registered with ELB - Elastic Load Balancer and traffic is routed away from old env . blue is everntually terminated 
+
+-Rollback for BG - Set load balancer to redirect traffic to older env 
+
+ BG vs In Place 
+ IN place - Capacity reduced during deployment, Lambda not supported, rolling back involves re-deploy , great when deploying first time 
+ Blue/Green - No capacity reduction, green instances created ahead of time, easy to switch between old and new, pay for 2 envs until old servers terminated 
+
+ Blue/green - safest option for Prod env 
+ 
+
