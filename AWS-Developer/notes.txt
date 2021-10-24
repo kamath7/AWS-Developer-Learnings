@@ -42,5 +42,24 @@ Code Deploy -
  Blue/Green - No capacity reduction, green instances created ahead of time, easy to switch between old and new, pay for 2 envs until old servers terminated 
 
  Blue/green - safest option for Prod env 
- 
+
+ AppSpec File 
+ - Config file - Defines parameters to be used during CodeDeploy depoloyment 
+ - EC2 - for ec2 and on-premises systems, yaml only 
+ = lambda - yaml and json supported. file structure depends on  whether you are deploying to lambda or ec2 
+ - 4 parts 
+ - version - currently allowed value is 0.0 
+ - OS - operating system version. either linux or windows 
+ - files - config files or packages. location of any app files that need to copied or where theys hould be copied to 
+ - hook - scripts that run at set points in deployments lifecycle. hoks have specific run order 
+
+Scripts run during deployment 
+- unzip files - unzip prior to deployment 
+- run tests - run functional tests on newly deployed app 
+- deal with load balancing - de-register and re-register instances with load balancer 
+
+Typical folder setup 
+- must be placed in root of folder - appspec.yml /scripts /config /source 
+
+
 
