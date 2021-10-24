@@ -61,5 +61,24 @@ Scripts run during deployment
 Typical folder setup 
 - must be placed in root of folder - appspec.yml /scripts /config /source 
 
+Code Deploy - life cycle event hooks 
+- Hooks are run in specific order known as run order 
+- Phase 1 - De register instances from load balancer 
+- Phase 2 - nuts and bolts of application deployment 
+- Phase 3 - Re -register instances with load balancer 
 
-
+Types of hooks 
+- Before hook - tasks to be run on instances before they are de-registered from load balancer 
+- Block - De-register instances from Load Balancer 
+- After tasks you want to run on instances after they are de registered from Load Balancer 
+Run order -
+- Application Stop - Gracefully stop the application
+= Download bundle - Codedeploy agent copies application revision files to temporary location 
+- Before Install - pre installation scripts. backing up crurent ver, decrypring files 
+- Install - copy app files to final location 
+- After install - Post-install script. eg config, file permissions 
+- ApplicationStart: start any services stopped during applicationstop 
+- ValidateService - Run tests to validate service 
+- BeforeAllowTraffic - Tasks you want to run on instances before they're registered with load balancer 
+- AllowTraffic - Register instances with load balancer 
+- After - Tasks you want to run on instances after they are registered with Load Balancer 
