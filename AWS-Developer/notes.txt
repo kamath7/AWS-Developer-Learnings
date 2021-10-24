@@ -1,0 +1,16 @@
+CI/CD 
+
+- SW dev best practice 
+- CI - Continuous Integration and CD - Delivery/Deployment 
+- Make small changes and automate everything
+- Automation good , manual bad 
+- small changes and easy to catch bugs to fix 
+- Shared code repo - multiple devs contributing to code
+- Automated build - changes appear in code repo- 
+- automated test - testing done 
+- Code merged, prepared for deployment, manual descision or fully automated 
+- Code Commit - Source control service enabling teams to collaborate on code, scripts etc 
+- Code Build - Compiles code, runs tests and produces packages ready to deploy 
+- Code Deploy - automates code deployments to any instance - EC2, lambda 
+- Code Pipeline  - End to end sol, build, test and deploy app every time there is a change 
+AWS Whitepaper - Practice CI&CD on AWS. 
