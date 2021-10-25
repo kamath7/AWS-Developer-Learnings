@@ -91,3 +91,11 @@ Code Pipeline
 - Automated Release process - Fast, consistent. enables quick release of new features and bug fixes 
 - CodePipeline integrates with other CodeCommit, CodeBuild, GitHub, Jenkins, Elastic Beanstalk 
 - Process - Workflow defined, New Code Appears, Code is Built and Tested, Application Deployed
+
+Microservices
+
+- Traditional - Monolithic - Difficult to change.
+- Architectural and organizational approach to software dev where software made up of smaller components
+- many services are made up of microservices running in containers
+- Advantages - Serviceability, Flexibility, Scalability 
+- If one component breaks - not a problem, quick to fix
