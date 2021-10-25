@@ -99,3 +99,13 @@ Microservices
 - many services are made up of microservices running in containers
 - Advantages - Serviceability, Flexibility, Scalability 
 - If one component breaks - not a problem, quick to fix
+
+Elastic Container Service 
+- Able to run containerised workloads on AWS 
+- Container - Similar to VM, more like virtual OS. Standardised unit with everything software needs to run. Apps are created using independent stateless component running in containers . Docker to create linux containers
+- Container contains code, libraries and virtual kernel which runs on Docker. as app scales, can add more and more containers 
+- Advantages - highly scalable (scale only services), easy to build fault tolerant services, Easy to maintain than large monolithic apps 
+- ECS - Container orchestration service which support docker. Similar to Kubernetes. Advantage is integration with IAm, Route 53 
+- Choice to run on Clusters of Virtual Machines or Fargate for Serverless. EC2 to be used for more control 
+- Create ECR (elastic container registry ). 
+- Services and ECS - Amazon Sagemaker, Amazon Lex, amazon.com
