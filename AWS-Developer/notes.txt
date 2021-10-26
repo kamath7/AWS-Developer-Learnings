@@ -109,3 +109,15 @@ Elastic Container Service
 - Choice to run on Clusters of Virtual Machines or Fargate for Serverless. EC2 to be used for more control 
 - Create ECR (elastic container registry ). 
 - Services and ECS - Amazon Sagemaker, Amazon Lex, amazon.com
+
+Docker & ECS 
+
+- CodeCommit - Dockerfile uploaded with buildspec.yaml
+= CodeBuild - Docker image generated and Docker image stored in ECR 
+- Docker command to build, tag and push docker image to ECR 
+
+docker build -t myimagerepo
+docker tag myimagerepo:latest 1122.us-east-1.amazonaws.com/myimagerepo:latest 
+docker push 1122.us-east-1.amazonaws.com/myimagerepo:latest 
+
+-buildspec.yml to define build command and setting used by CodeBuild to run build 
