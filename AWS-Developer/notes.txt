@@ -139,3 +139,15 @@ CloudFormation
 - Can create custom mapping like region 
 - allows to reference code located in S3. Lambda code or reusable snippets of CF code 
 
+Serverless Application Model (SAM)
+
+- SAm - extension to CloudFormation used to define serverless applications 
+- Simplified syntax - 
+- SAM CLI - to package deployment code, upload to s3 and deploy serverless apps 
+
+SAM Commands 
+sam package --template-file ./mmm.yml --output-template-file sam-template.yml --s3-bucket s3-bucket-name
+
+sam deploy --template-file .mm.yml --stack-name mystack --capabilities CAPABILITY_IAM
+
+
