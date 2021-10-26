@@ -150,4 +150,6 @@ sam package --template-file ./mmm.yml --output-template-file sam-template.yml --
 
 sam deploy --template-file .mm.yml --stack-name mystack --capabilities CAPABILITY_IAM
 
-
+Cloud Formation Nested stacks 
+- enables reuse of CloudFormation code for common use cases. Standard config for lb, web server etc 
+- Defined within the resources section
