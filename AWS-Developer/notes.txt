@@ -121,3 +121,10 @@ docker tag myimagerepo:latest 1122.us-east-1.amazonaws.com/myimagerepo:latest
 docker push 1122.us-east-1.amazonaws.com/myimagerepo:latest 
 
 -buildspec.yml to define build command and setting used by CodeBuild to run build 
+
+Docker and Elastic Bean Stalk 
+- ELB supports deployment of docker containers 
+- elb handles capacity provisioning, load balancing etc. 
+- Single Docker Container on EC2 instance or can use Multiple Docker container. ELB will build ECS cluster 
+- upload zip file containing code bundle and elb will do the rest 
+- upgrade app to new version, easy to do in the console 
