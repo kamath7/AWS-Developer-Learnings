@@ -128,3 +128,14 @@ Docker and Elastic Bean Stalk
 - Single Docker Container on EC2 instance or can use Multiple Docker container. ELB will build ECS cluster 
 - upload zip file containing code bundle and elb will do the rest 
 - upgrade app to new version, easy to do in the console 
+
+
+CloudFormation 
+- Manage, configure and provision aws infra as code. Defined using CloudFormation tempalte. Template supports YAML or JSON 
+- Consistent, quick and efficient, version control, free to use and manage updates, rolling back 
+- Uses YAML/JSON template, can upload to CloudFormation using S3, Reads template and makes API calls, resulting resources from template is called stack 
+- Can provision resources based on env
+- can input custom values 
+- Can create custom mapping like region 
+- allows to reference code located in S3. Lambda code or reusable snippets of CF code 
+
