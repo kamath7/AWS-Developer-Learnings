@@ -1,0 +1,30 @@
+Advanced IAM 
+
+Web identity Federation 
+
+-Simplifies authentication and authorization for web apps
+- User Access to AWS resoucrces by authentication from FB, Amazon or Google
+- Following successful authentication user receive auth code from web id provider 
+- users can trade auth code for temporary aws security creds, allowing access to aws resources 
+- amazon cognito - provides web id federation including sign up and sign in 
+- identity broker - manages auth bw app and web id providers. no additional code 
+- multiple devices synchronized 
+- recommended for mobile apps
+- Temporary credentials -congnito brokers bw app and FB, AMZ or Goog to provide temporary credentials
+- credentials mapped to IAM role, allowing access to resources
+- no need for embedding aws credentials locally 
+- seamless experience across all devices 
+- User pools - user dir used to manage sign up and sign in func for mobile and web apps 
+- Sign In - can sign in directly to user prool using fb, amz or goog 
+- Identity pools enable to provide temp aws credentials. enabling access to aws services like s3 or DDb 
+- Cognito tracks association bw user identity and various diff devices they sign in from 
+- cognito uses push sync to push updates and sync user data across devices
+- SNS notifications sent to all devices associated with user identity whenever data changes 
+
+User pools vs Identity Pools 
+
+User pools
+- User directories used to manage sign up and sign in func for mob and web apps
+Identity Pools 
+- identity pools enable to provide temp aws creds 
+- enables access to aws services like s3 
