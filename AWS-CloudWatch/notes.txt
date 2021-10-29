@@ -37,3 +37,25 @@ Cloudwatch alarms
 - can include ec2 cpu utilisation, elb latency or even charges on aws bill 
 - threshold - set appropriate thresholds to trigger alarms 
 - can send notification or execite auto scaling policy for CPU utilisation > 90% if required
+
+CloudWatch vs Cloudtrail 
+
+Cloudtrail 
+- service that records user activity in aws acct 
+- cloudtrail records events such as creation, modification, delete of resources such as iam users, s3 buckets
+- default - 90 days of acct activity
+
+When to use Cloudwatch and Cloudtrail
+
+CloudWatch
+- performance and metrics 
+- cloudwatch logs 
+- cloudwatch alarms 
+CloudTrail 
+- used to record all api calls  in aws accts 
+- delivers log files containing api call to s3 bucket 
+- can be intergated with cloudwatch logs 
+
+Difference 
+- is monitoring of aws resources required? then cloudwatch
+- is audit log required of aws activity? then cloudtrail 
