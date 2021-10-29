@@ -28,3 +28,32 @@ User pools
 Identity Pools 
 - identity pools enable to provide temp aws creds 
 - enables access to aws services like s3 
+
+
+Inline, AWS Managed and Customer Managed Policies 
+
+3 different types of Policies
+- AWS managed policies 
+- Customer Managed Policies 
+- Inline Policies
+
+
+Managed Policy - 
+IAm policy created and administrered by AWS 
+- amazondynamodbfullaccess
+- assign appropriate perms to users without having to write policy ourself 
+- can attach to multiple users, groups or roles in same aws acct or different 
+- cannot change permissions defined 
+
+Customer Managed Policies 
+- standalone policy user creates 
+- can attach user, group but within the same aws acct 
+- can copy existing policy 
+-
+recommended cases where existing policies don't match needs 
+
+Inline 
+- 1:1 relation bw entity and policy 
+- when user is deleted, policy deleted 
+- AWS recommends using managaed policies over inline policies 
+- single user, group or role 
