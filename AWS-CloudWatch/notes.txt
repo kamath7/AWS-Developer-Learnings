@@ -1,0 +1,39 @@
+AWS CloudWatch 
+
+- Monitoring service to monitor health and performance of aws resources as well as apps that run on AWS and in own datacenter 
+- Compute - Can monitor EC2 instances, ASG, ELBs, Lambda, 
+- Storage - EBS vols, Storage gateway, CloudFront 
+= DBS - DynamoDBS, elasticache , rds, redshit, 
+- Others - SNS topics, sqs queues, api gateway
+
+- Cloudwatch agent - can define custom metrics 
+- Cloudwatch logs - OS logs and app logs for monitoring 
+
+CloudWatch and EC2 
+
+- All EC2 instances send key health and performance metrics to Cloudwatch 
+- Default EC2 host level metrics consist of CPU network, disk and status check 
+- Metrics stored indefintely 
+- can retrieve data from EC2 or ELB instance even after termination 
+
+OS Level metrics 
+- By default no os level metric emitted by EC2 
+- Cloudwatch agent can be used to configure 
+- OS level metrics - Memeory usage, processes running on instance, amount of free disk space, CPU idle time 
+
+Metric Frequency
+
+- By default, EC2 sends metric data to cloudwatch in 5 min intervals 
+- additional charge for 1 min intervals 
+- for custom metrics, default is 1 min interval and can configure high res metric at 1 sec intervals 
+
+Monitoring System and App logs 
+- Monitor log file and troubleshoot 
+- Can customise for custom app 
+- Common use case - track no of errors that occur in app log and send notification whenever threshold breached 
+
+Cloudwatch alarms 
+- Can create an alarm to monitor any amazon cloudwatch metric in acct 
+- can include ec2 cpu utilisation, elb latency or even charges on aws bill 
+- threshold - set appropriate thresholds to trigger alarms 
+- can send notification or execite auto scaling policy for CPU utilisation > 90% if required
