@@ -65,3 +65,8 @@ STS AssumeRoleWithWebIdentity
 - Returns temp credentials authenticated by mob or web 
 - Regular web apps can use AssumeRoleWithWebIdentity. cognito recommended for Mobile 
 - ARN identifiers can be used to refer to temp credentials 
+
+Cross Account Access 
+-Delegating acess to resources in different aws accts that are owned by us 
+- can create role in one acct and grant perms to users in diff acct 
+- can switch roles within the mgmt console .no pwd is required 
